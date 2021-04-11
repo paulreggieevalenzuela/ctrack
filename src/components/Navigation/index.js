@@ -30,7 +30,7 @@ const Navigation = () => {
             <div className="nav__search">
                 <input
                     type="text"
-                    placeholder="Search..."
+                    placeholder="Search here..."
                     onChange={_handleSearch}
                 />
             </div>

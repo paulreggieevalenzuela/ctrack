@@ -6,31 +6,34 @@
 }
 
 input {
-    width: 300px;
-    padding: 12px;
     background-color: transparent;
-    transition: transform 500ms ease-in-out;
-    font-size: 14px;
-    line-height: 18px;
-    color: #575756;
+    backface-visibility: hidden;
     border-radius: 5px;
     border: 1px solid #575756;
-    transition: all 250ms ease-in-out;
-    backface-visibility: hidden;
+    color: #575756;
+    cursor: pointer;
+    font-size: 14px;
+    line-height: 18px;
+    padding: 12px;
+    -webkit-transition: all .5s;
+    -moz-transition: all .5s;
+    transition: all .5s;
     transform-style: preserve-3d;
+    width: 50px;
 }
 
 input::placeholder {
     color: color(#575756 a(0.8));
-    text-transform: uppercase;
     letter-spacing: 1.5px;
+    text-transform: uppercase;
 }
 
 input:focus,
 input:hover {
-    padding: 12px;
-    outline: 0;
     border: 1px solid transparent;
     border-bottom: 1px solid #575756;
     border-radius: 0;
+    outline: 0;
+    padding: 12px;
+    width: 300px;
 }

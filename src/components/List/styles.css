@@ -1,43 +1,87 @@
-ul {
-    padding: 0;
-    margin: 0;
-    border: 1px solid #b4b4b4;
-    width: 100%;
-}
-
-li {
-    border-bottom: 1px solid #b4b4b4;
-}
-
-li:last-child {
-    border-bottom: 0;
-}
-
-.list__header,
-.list__item {
+/* Can create a core component for loading state */
+.spinner {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    padding: 15px;   
+}
+  
+table {
+    border: 1px solid #ccc;
+    border-collapse: collapse;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    table-layout: fixed;
 }
 
-.list__header-item {
-    font-weight: 18px;
-    font-weight: 700;
-    flex: 1;
-    padding: 10px 15px;
-    border-right: 1px solid #b4b4b4;
+tr {
+    background-color: #f8f8f8;
+    border: 1px solid #ddd;
+    padding: .35em;
 }
 
-.list__header-item:last-child {
-    border-right: 0;
+tr a {
+    display: inline-block;
+    margin-right: 10px;
 }
 
-.list__item-content {
-    font-size: 14px;
-    border-right: 1px solid #b4b4b4;
-    flex: 1;
-    padding: 10px 15px;
+tr a:last-child {
+    margin-right: 0;
 }
 
-.list__item-content:last-child {
-    border-right: 0;
+th,
+td {
+    padding: .625em;
+    text-align: center;
+}
+
+th {
+    font-size: .85em;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+}
+
+@media screen and (max-width: 600px) {
+    table {
+        border: 0;
+    }
+
+    thead {
+        border: none;
+        clip: rect(0 0 0 0);
+        height: 1px;
+        margin: -1px;
+        overflow: hidden;
+        padding: 0;
+        position: absolute;
+        width: 1px;
+    }
+
+    tr {
+        border-bottom: 3px solid #ddd;
+        display: block;
+        margin-bottom: .625em;
+    }
+
+    td {
+        border-bottom: 1px solid #ddd;
+        display: block;
+        font-size: .8em;
+        text-align: right;
+    }
+
+    td::before {
+        /*
+        *   aria-label has no advantage, it won't be read inside a table
+            content: attr(aria-label);
+        */
+        content: attr(data-label);
+        float: left;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+
+    td:last-child {
+        border-bottom: 0;
+    }
 }
