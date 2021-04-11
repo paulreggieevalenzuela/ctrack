@@ -1,0 +1,36 @@
+.nav {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+}
+
+input {
+    width: 300px;
+    padding: 12px;
+    background-color: transparent;
+    transition: transform 500ms ease-in-out;
+    font-size: 14px;
+    line-height: 18px;
+    color: #575756;
+    border-radius: 5px;
+    border: 1px solid #575756;
+    transition: all 250ms ease-in-out;
+    backface-visibility: hidden;
+    transform-style: preserve-3d;
+}
+
+input::placeholder {
+    color: color(#575756 a(0.8));
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
+input:focus,
+input:hover {
+    padding: 12px;
+    outline: 0;
+    border: 1px solid transparent;
+    border-bottom: 1px solid #575756;
+    border-radius: 0;
+}
